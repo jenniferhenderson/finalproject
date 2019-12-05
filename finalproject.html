@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <script src="pizzaa.js"> </script>
+    <div class="row">
+      <div class="column"></div>
+      <div class="column"></div>
+      <div class="column"></div>
+    </div>
+<style>
+*{
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-image: url("pattern-light-grey.png");
+  background-size: cover;
+}
+/* Style the top navigation bar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+/* Style the topnav links */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 10px;
+  text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Create three equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 33.33%;
+  padding: 15px;
+}
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
+}
+h1{
+    padding: 50px;
+    text-align: center;
+    background-color: blue;
+    background-image: url("pizza2.jpg");
+    height: 150px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    font-family: 'Lato', sans-serif;
+  }
+  h2{
+font-family: 'Lato', sans-serif;
+color: red;
+text-align: center;
+background-color: white;
+border-style: solid;
+border-width: 2px;
+border-color: black;
+  }
+  nav{
+    background-color: white;
+    font-family: 'Lato', sans-serif;
+    border-style: solid;
+    border-width: 2px;
+    border-color: black;
+}
+img{
+padding: 15px;
+width: 100%;
+}
+label{
+  padding: 15px;
+  width: 100%;
+  color: black;
+}
+</style>
+<h1>Welcome to Pizza Wonderland</h1>
+<body>
+<div class="topnav">
+  <a href="#">Pizza Pictures</a>
+  <a href="#">Pizza Recipies</a>
+  <a href="#">Email me your favourite pizza</a>
+</div>
+<div class="row">
+  <div class="column">
+<h2>Top Rated Pizza Places in Toronto</h2>
+<section>
+  <p>
+<nav>
+  <ol type= "1">
+    <li>Maker Pizza</li>
+    <li>North of Brooklyn Pizzeria</li>
+    <li>Descendant Pizza</li>
+    <li>Pizzeria Libretto</li>
+    <li>Terroni</li>
+    <li>Conspiracy Pizza</li>
+    <li>Superpoint</li>
+    <li>Defina Woodfired</li>
+    <li>General Assembly Pizza</li>
+  </ol>
+</nav>
+
+<label for="example">Enter your favourite pizza place
+</label>
+<input id="example" type="text"
+       name="Ntext" size="20">
+<input id="sent" type="submit"
+       value="Submit">
+</p>
+</div>
+  <div class="column">
+
+<img src="pizzaz.gif" alt="Dancing Pizza">
+<img src="cat.gif" alt="Location">
+</div>
+  <div class="column">
+<h2>Make Your Favourite Pizza</h2>
+  <p>
+<nav>
+  <ol type= "1">
+    <li>Buy some pizza dough from Sobeys</li>
+    <li>Roll out the dough</li>
+    <li>Place your dough on a pizza backing pan</li>
+    <li>Cover your pizza in tomatoe sauce</li>
+    <li>Layer your pizza with cheese/li>
+    <li>Add all your favourite toppings</li>
+    <li>Bake your pizza for 35 minutes at 350 degrees</li>
+    <li>Eat your pizza and pair it with a nice wine or beer</li>
+  </ol>
+</nav>
+</div>
+</div>
+    <p id="para">
+    </p>
+
+    <script>
+    window.onclick = function(e)
+    {   var id =  e.target.id;
+     if (id === 'submit')
+     { var txt = document.getElementById('example').value
+       $( "#para" ).empty().append( txt );
+     }
+     function myFunction() {
+            var x =
+                document.getElementById("example").value;
+
+            document.getElementById(
+              "para").innerHTML = x;
+    }
+}
+  </script>
+  <button onclick="myFunction()">Try it</button>
+
+</section>
+  </body>
+  </html>
